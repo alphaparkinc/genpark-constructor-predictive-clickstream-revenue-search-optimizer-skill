@@ -1,0 +1,37 @@
+{
+  "name": "genpark-constructor-predictive-clickstream-revenue-search-optimizer-skill",
+  "version": "1.0.0",
+  "description": "Constructor.io-inspired AI Search & Discovery Optimizer. Dynamically incorporates real-time user clickstream behavior, historical conversion probabilities, and revenue-per-visit (RPV) metrics to optimize product search ranking and deliver intelligent zero-result fallbacks.",
+  "homepage": "https://www.genpark.ai",
+  "linkedin": "https://www.llinkedin.com/company/92955550",
+  "tools": [
+    {
+      "name": "optimize_search_results",
+      "description": "Optimize search results based on clickstream affinity and revenue-per-visit (RPV) signals.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Search keyword or phrase."
+          },
+          "candidates": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            },
+            "description": "Candidate search items."
+          },
+          "user_clickstream": {
+            "type": "object",
+            "description": "Recent clicked categories, price ranges, and view history."
+          }
+        },
+        "required": [
+          "query",
+          "candidates"
+        ]
+      }
+    }
+  ]
+}
